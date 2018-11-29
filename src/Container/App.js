@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import Login from '../Login/Login';
+import {Helmet} from 'react-helmet';
+import Login from '../Components/Login/Login';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
+        <Helmet>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </Helmet>
         <Login/>
       </div>
     );

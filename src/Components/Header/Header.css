@@ -1,0 +1,13 @@
+.headerContainer{
+    height:60px;
+    background-color: #ECEEEF;
+    opacity: 100%;
+}
+
+.textSpan{
+    font-size: 22px;
+    margin-left: 416px;
+    padding: 17px;
+    height: 26px;
+    color:#373A3C;
+}

@@ -1,19 +1,15 @@
 import React from 'react';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import LoginContainer from './LoginContainer';
 import './Login.css';
 
 const Login = () =>{
     return(
-        <div className="loginContainer">
-           <div className="formContainer">
-                <h1>Welcome</h1>
-                <span>Email:
-                <input type="email" text="Email" /><br/><br/>
-                </span>
-                <span>Password:
-                <input type="password" text="Password" />
-                </span>
-                
-           </div>
+        <div>
+            <Header/>
+            <LoginContainer/>
+            <Footer/>
         </div>    
     )
 };
