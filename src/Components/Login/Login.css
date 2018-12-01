@@ -23,9 +23,8 @@
 }
 
 .loginButton{
-    float:right;
-    padding: 6px;
-    margin-top:50px;
+    padding: 4px;
+   /* margin-top:50px;*/
     border-radius:4px;
     width:260px;
     background-color:#1C7CD5;

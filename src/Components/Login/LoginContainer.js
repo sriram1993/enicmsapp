@@ -3,18 +3,18 @@ import './Login.css';
 
 const loginContainer = () =>{
     return(
-        <form className="loginContainer">
-            <div className="txtArea">
-              <span className="txtLogin">Login</span><br/>
-              <p>Email address</p>
-              <input type="text" placeholder="Email address" className="txtBoxEmailPassword"/>
-              <p>Passwort</p>
-              <input type="password" placeholder="Passwort" className="txtBoxEmailPassword"/>
-              <div>
-              <button className="loginButton">Login</button>
-              </div>
-            </div>
-        </form>
+       // <form className="loginContainer">
+       <form className="container">
+         <h1>Login</h1>
+         <div className="form-group">
+           <label for="email">Email address</label>
+           <input type="email" placeholder="Email address"  className="form-control"/>
+         </div>
+         <div className="form-group">
+           <label for="passwort">Passwort</label>
+           <input type="password" placeholder="passwort"  className="form-control"/>
+         </div>
+      </form>
     )
 };
 

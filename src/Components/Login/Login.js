@@ -9,7 +9,7 @@ const Login = () =>{
         <div>
             <Header/>
             <LoginContainer/>
-            <Footer/>
+            {/* <Footer/> */}
         </div>    
     )
 };

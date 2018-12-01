@@ -2,12 +2,12 @@
     height:60px;
     background-color: #ECEEEF;
     opacity: 100%;
+    color:#373A3C;
 }
 
 .textSpan{
-    font-size: 22px;
-    margin-left: 416px;
-    padding: 17px;
-    height: 26px;
+    font-size: 1.375em;
+    margin-left: 10em;
+    padding: 1em;
     color:#373A3C;
 }
