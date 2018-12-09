@@ -6,8 +6,8 @@
 }
 
 .textSpan{
-    font-size: 1.375em;
-    margin-left: 10em;
-    padding: 1em;
+    font-size: 1em;
+    /* margin-left:1em;
+    padding: 1em;  */
     color:#373A3C;
 }

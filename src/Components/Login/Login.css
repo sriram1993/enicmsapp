@@ -1,6 +1,15 @@
 .loginContainer{
-    height:568px;
-    color:#373A3C;   
+    color:#373A3C;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 9%;
+    /* position: relative; */
+    /* background-color: black;  */
+    /* height: 500px; 
+    width: 1000px; */
+    /* margin-left:500px;
+    margin-top: 107px;  */
 }
 
 .txtArea{
@@ -23,8 +32,9 @@
 }
 
 .loginButton{
-    padding: 4px;
+     padding: 4px; 
    /* margin-top:50px;*/
+    float:right;
     border-radius:4px;
     width:260px;
     background-color:#1C7CD5;
