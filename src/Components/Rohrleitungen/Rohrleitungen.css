@@ -2,3 +2,24 @@
     margin-top:5em;
 }
 
+.detailsImage{
+    width:1em;
+    height: 1em;
+}
+
+.btnDownloadAllInspection{
+    background-color: #F0AD4E;
+}
+
+.tableContainer{
+    overflow:auto;
+    height: 20em;
+}
+
+.rohrHeader{
+    height:15%;
+}
+
+.rohrFooter{
+    height:15%;
+}
