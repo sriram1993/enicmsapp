@@ -2,9 +2,17 @@
     margin-top:5em;
 }
 
+.modalContainer{
+    margin-top:5em;
+}
 .detailsImage{
     width:1em;
     height: 1em;
+}
+
+.downloadImage{
+    height:16.55px;
+    width:7.96px;
 }
 
 .btnDownloadAllInspection{
@@ -22,4 +30,14 @@
 
 .rohrFooter{
     height:15%;
+}
+
+.transparentButton{
+    border: 1px solid #DDDDDD;
+    color:#373A3C;
+}
+
+.closeIcon{
+    height:16px;
+    width:16px;
 }

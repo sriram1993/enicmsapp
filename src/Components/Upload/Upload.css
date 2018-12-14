@@ -1,0 +1,12 @@
+.uploadContainer{
+    margin-top:4em;
+}
+
+.btnUpload{
+    width:260px;
+}
+
+.btnImportieren{
+    background-color: #5CB85C;
+    border : 1px solid #5CB85C;
+}

@@ -24,6 +24,10 @@ const Header = () =>{
                     </ul>
                 </div>
               </nav>
+              {/* <div>
+                <input className="form-control mr-sm-2" type="search" placeholder="Suche" aria-label="Search"/>
+                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Suchen</button>
+              </div> */}
             </div>
             </div>
         );

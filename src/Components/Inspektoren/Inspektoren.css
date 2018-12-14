@@ -1,0 +1,15 @@
+.inspektorenContainer{
+    margin-top: 5em;
+}
+
+.btnInspektonDelete{
+    background-color: #dc3545;
+    border-color: #dc3545;
+
+}
+
+.btnHinzufugen{
+    background-color: #5CB85C;
+    border-color: #5CB85C;
+    width:255px;
+}
