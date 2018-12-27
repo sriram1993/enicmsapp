@@ -16,12 +16,12 @@ const Login = () =>{
         <div>
             <Header/>
             {/* <LoginContainer/> */}
-            {/* <Container/> */}
+            <Container/>
             {/* <ModalContainer/> */}
             {/* <Inspektoren/> */}
             {/* <NeuerInspektor/> */}
             {/* <InspektorenDetails/> */}
-            <Upload/>
+            {/* <Upload/> */}
             <Footer/>
         </div>    
     )

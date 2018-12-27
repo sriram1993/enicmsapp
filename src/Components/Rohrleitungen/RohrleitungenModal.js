@@ -2,7 +2,9 @@ import React from 'react';
 import './Rohrleitungen.css';
 
 
-const modalDialog = () =>{
+const modalDialog = ({handleClose,show,modalData}) =>{
+    console.log("Modal Dialog" + handleClose);
+    console.log("Modal Data:" + modalData);
     return(
     //     <div className="modal fade myModal">
     //     <div className="modal-dialog modal-lg">
@@ -25,17 +27,19 @@ const modalDialog = () =>{
     //       </div>
     //     </div>
     //   </div>
-
-
-    // Remove modalContainer class once the Modal popup is working
-    <div className="container modalContainer">
-        <div>
+        //<div style={{ position: "fixed", top: "0px", left: "0px", width: "200px", height: "100px", background: "#123456", display: `${show ? "block" : "none"}` }}>LALLA</div>
+    
+    <div className="modal" style={{display: `${show ? "block" : "none"}`}} id="rohrleitungenModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal-dialog modal-dialog-centered modal-lg">
+        <div className="modal-content">
+         <div className="modal-header">
             <h5 className="d-inline-block">D015-390A-O-022108</h5>
             <div className="d-inline-block float-right">
                 <button type="submit" className="btn btn-primary">Neue Inspektion anlegen</button>&nbsp;&nbsp;&nbsp;
-                <img src={process.env.PUBLIC_URL+'/close.png'} className="closeIcon"  alt="..."/ >
+                <a href="#"><img src={process.env.PUBLIC_URL+'/close.png'} className="closeIcon"  alt="..." onClick={handleClose} /></a>
             </div>
-        </div><hr/>
+         </div><hr/>
+         <div className="modal-body">
         <table className="table">
                 <thead className="thead-dark">
                     <tr>
@@ -66,12 +70,15 @@ const modalDialog = () =>{
                     </tr>
                 </tbody>
             </table><br/><br/>
+            </div>
             <hr/>
-            <div className="d-inline-block float-right">
-                <button type="button" className="btn btn-success btnDownloadAllInspection">Alle downloaden</button>&nbsp;&nbsp;
+            <div className="d-inline-block float-right modal-footer">
+                <button type="button" className="btn btn-success  btnDownloadAllInspection">Alle downloaden</button>&nbsp;&nbsp;
                 {/* <button type="button" className="btn "></button> */}
                 <button type="button" className="btn btn-outline-info float-right transparentButton">Schließen</button>
             </div>
+            </div>
+          </div>
         </div>
     )
 };
