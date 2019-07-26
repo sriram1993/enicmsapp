@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css';
+import { Switch, Route, Link } from 'react-router-dom';
+import LoginContainer from '../Login/LoginContainer';
 
 const Header = () =>{
         return(
@@ -9,18 +11,18 @@ const Header = () =>{
                 <div className="collapse navbar-collapse">
                     <ul className="nav row">
                         <li className="nav-item">
-                            <a className="nav-link textSpan" href="#"><b>ENI App</b></a>
+                            <Link className="nav-link textSpan" to="/"><b>ENI App</b></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link textSpan" href="#">Rohrleitungen</a>
+                            <Link className="nav-link textSpan" to="/pipe">Rohrleitungen</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link textSpan" href="#">Inspektron</a>
+                            <Link className="nav-link textSpan" to="/inspektron">Inspektron</Link>
                         </li>
-                        <li className="nav-item form-inline ml-auto">
+                        {/* <li className="nav-item form-inline ml-auto">
                             <input className="form-control mr-sm-2" type="search" placeholder="Suche" aria-label="Search"/>
                             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Suchen</button>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
               </nav>

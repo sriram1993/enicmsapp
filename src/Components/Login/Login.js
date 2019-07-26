@@ -8,6 +8,7 @@ import Inspektoren from '../Inspektoren/Inspektoren';
 import NeuerInspektor from '../Inspektoren/NeuerInspektor';
 import InspektorenDetails from '../Inspektoren/InspektorenDetails';
 import Upload from '../Upload/Upload';
+import { Switch, Route } from 'react-router-dom'
 
 import './Login.css';
 
@@ -16,12 +17,17 @@ const Login = () =>{
         <div>
             <Header/>
             {/* <LoginContainer/> */}
-            <Container/>
+            <Switch>
+                <Route exact path='/' component={LoginContainer}/>
+                <Route exact path='/pipe' component={Container}/>
+                <Route exact path='/inspektron' component={Inspektoren}/>
+                <Route exact path='/upload' component={Upload}/>
             {/* <ModalContainer/> */}
             {/* <Inspektoren/> */}
             {/* <NeuerInspektor/> */}
             {/* <InspektorenDetails/> */}
             {/* <Upload/> */}
+            </Switch>
             <Footer/>
         </div>    
     )

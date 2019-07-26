@@ -2,9 +2,12 @@ import React from 'react';
 import './Rohrleitungen.css';
 
 
-const modalDialog = ({handleClose,show,modalData}) =>{
-    console.log("Modal Dialog" + handleClose);
-    console.log("Modal Data:" + modalData);
+const modalDialog = (props) =>{
+    //console.log("Modal Dialog" + handleClose);
+    console.log("Modal Data:" + props.modalData);
+    props.modalData.map((person, index) => {
+        console.log("Person"+ person.auffalligkeiten + "  Index:" + index);
+      });
     return(
     //     <div className="modal fade myModal">
     //     <div className="modal-dialog modal-lg">
@@ -29,14 +32,14 @@ const modalDialog = ({handleClose,show,modalData}) =>{
     //   </div>
         //<div style={{ position: "fixed", top: "0px", left: "0px", width: "200px", height: "100px", background: "#123456", display: `${show ? "block" : "none"}` }}>LALLA</div>
     
-    <div className="modal" style={{display: `${show ? "block" : "none"}`}} id="rohrleitungenModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal" style={{display: `${props.show ? "block" : "none"}`}} id="rohrleitungenModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content">
          <div className="modal-header">
-            <h5 className="d-inline-block">D015-390A-O-022108</h5>
+            <h5 className="d-inline-block">{props.selectedPipe}</h5>
             <div className="d-inline-block float-right">
                 <button type="submit" className="btn btn-primary">Neue Inspektion anlegen</button>&nbsp;&nbsp;&nbsp;
-                <a href="#"><img src={process.env.PUBLIC_URL+'/close.png'} className="closeIcon"  alt="..." onClick={handleClose} /></a>
+                <a href="#"><img src={process.env.PUBLIC_URL+'/close.png'} className="closeIcon"  alt="..." onClick={props.handleClose} /></a>
             </div>
          </div><hr/>
          <div className="modal-body">
@@ -51,7 +54,19 @@ const modalDialog = ({handleClose,show,modalData}) =>{
                         <th scope="col"></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody>{props.modalData.map(function(item,key){
+                    const rowIndex = key +1;
+                    return(
+                        <tr key={key}>
+                        <th scope="row">{rowIndex}</th>
+                            <td>{item.prüfaufsicht}</td>
+                            <td>{item.datum}</td>
+                            <td>{item.auffalligkeiten}</td>
+                            <td><img src={process.env.PUBLIC_URL+'/download.png'} className="downloadImage"  alt="..."/ ></td>
+                        </tr>
+                    )
+                },this)}</tbody>
+                {/* <tbody>
                     <tr>
                     <th scope="row">1</th>
                         <td>ZUS</td>
@@ -68,7 +83,7 @@ const modalDialog = ({handleClose,show,modalData}) =>{
                         <td><img src={process.env.PUBLIC_URL+'/download.png'} className="downloadImage"  alt="..."/ ></td>
                         <td></td>
                     </tr>
-                </tbody>
+                </tbody> */}
             </table><br/><br/>
             </div>
             <hr/>
